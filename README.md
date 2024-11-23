@@ -1,1 +1,79 @@
 # Praktikum-6
+# Paython code
+
+data_Mahasiswa = {}
+
+def tambah_data():
+    print("\nTambah Data ")
+    nim = input("Masukkan Nim: ")
+    nama = input("Masukkan nama: ")
+    tugas = float(input("Masukkan Nilai Tugas: "))
+    uts = float(input("Masukkan Nilai UTS: "))
+    uas = float(input("Masukkan Nilai UAS: "))
+    nilai_akhir = (tugas * 0.3) + (uts * 0.35) + (uas * 0.35)
+    data_Mahasiswa[nama] = {"nama": nama, "tugas": tugas, "uts": uts, "uas": uas, "akhir": nilai_akhir}
+    print("\nData berhasil ditambahkan!")
+
+def ubah_data():
+    print("\nubah data")
+    nim = input("Masukkan nim mahasiswa: ")
+    if nim in data_Mahasiswa:
+        print(f"nama: {data_Mahasiswa[nim]['nama']}")
+        data_Mahasiswa[nim]['tugas'] = float(input("Masukkan Nilai Tugas Baru: "))
+        data_Mahasiswa[nim]['uts'] = float(input("Masukkan Nilai UTS Baru: "))
+        data_Mahasiswa[nim]['uas'] = float(input("Masukkan Nilai UAS Baru: "))
+        data_Mahasiswa[nim]['nilai_akhir'] = data_Mahasiswa[nim]['tugaas']* 0.3 + data_Mahasiswa[nim]['uts']* 0.35 + data_Mahasiswa[nim]['uas'] * 0.35
+        print("Data berhasil diubah!")
+    else:
+        print("Data berhasil di ubah!")
+
+def hapus_data():
+    print("\nhapus data")
+    nim = input("Masukkan Nim mahasiswa: ")
+    if nim in data_Mahasiswa:
+        del data_Mahasiswa[nim]
+        print("\nData berhasil dihapus!")
+    else:
+        print("\nData berhasil di hapus!")
+
+def tampilkan_data():
+        print("\nDaftar Nilai")
+        print("==============================================================")
+        print("| No |           Nama            |  Tugas  |   UTS   |   UAS   | Nilai Akhir |")
+        print("==============================================================")
+        for i, (nim, data) in enumerate(data_Mahasiswa.items(), start=1):
+            print(f"| {i:<2} | {nim:<6} | {data['nama']:<6} | {data['tugas']:<5} | {data['uts']:<3} | {data['akhir']:<5.2f} |")    
+        print("==============================================================")
+
+def cari_data():
+    print("\nCari Data")
+    nim = input("Masukkan nama: ")
+    if nim in data_Mahasiswa:
+        print("\nData ditemukan!")
+        print(f"Nim  : {[3455678]}")
+        print(f"nama : {data_Mahasiswa[nim]['nama']}")
+        print(f"Tugas: {data_Mahasiswa[nim]['tugas']}")
+        print(f"UTS  : {data_Mahasiswa[nim]['uts']}")
+        print(f"UAS  : {data_Mahasiswa[nim]['uas']}")
+    else:
+        print("\nNim berhasil ditemukan!")
+
+while True:
+    print("\nprogram input nilai")
+    print("=============")
+    pilihan = input("[(L)ihat, (T)ambah, (U)bah, (H)apus, (C)ari, (K)eluar]: ").lower()
+    if pilihan == "l":
+        tampilkan_data()
+    elif pilihan == 't':
+        tambah_data()
+    elif pilihan == 'u':
+        ubah_data()
+    elif pilihan == 'h':
+        hapus_data()
+    elif pilihan == 'c':
+        cari_data()
+    elif pilihan == 'k':
+        print("program selesai")
+        break
+    else:
+        print("\nPilihan tidak valid!")
