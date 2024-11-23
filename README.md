@@ -106,4 +106,7 @@ Output:
 # Input & Output pemrograman
 ![image](https://github.com/user-attachments/assets/59640335-7cce-452d-aaf9-22fc9faded30)
 ![image](https://github.com/user-attachments/assets/43f210bd-6465-4435-a904-3432a1e147f5)
+![image](https://github.com/user-attachments/assets/57c549fe-2730-49ff-b524-bbb8bdd3775e)
+
+# Run program
 
