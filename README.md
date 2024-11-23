@@ -31,13 +31,13 @@ Input:
 Output:
 
     Daftar Nilai
-  =========================
-  | NO |  NIM  |  Nama  | Tugas | UTS | UAS | Akhir |
+    =========================
+    | NO |  NIM  |  Nama  | Tugas | UTS | UAS | Akhir |
  
-  =========================
-  | 1  | 3455678 | patur rh | 81.0 | 87.0 | 90.0 | 86.25 |
+     =========================
+    | 1  | 3455678 | patur rh | 81.0 | 87.0 | 90.0 | 86.25 |
  
-  =========================
+    =========================
   
 • Ketika saya ingin melihat daftar mahasiswa, program menampilkan semua data dalam format tabel yang rapi. Ini memudahkan saya untuk melihat semua informasi sekaligus. 
   
