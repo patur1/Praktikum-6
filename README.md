@@ -33,10 +33,8 @@ Output:
     Daftar Nilai
   =========================================
   | NO |  NIM  |  Nama  | Tugas | UTS | UAS | Akhir |
- 
   =========================================
   | 1  | 211220 | Burhan Isnain | 87.0 | 89.0 | 90.0 | 88.75 |
-
   =========================================
   
 • Ketika saya ingin melihat daftar mahasiswa, program menampilkan semua data dalam format tabel yang rapi. Ini memudahkan saya untuk melihat semua informasi sekaligus. 
